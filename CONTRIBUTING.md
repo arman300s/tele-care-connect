@@ -1,136 +1,71 @@
-# Contributing to TeleCare Connect
+# Contributing to Tele-Care Connect
 
-Thank you for your interest in contributing to TeleCare Connect! This project is open source and welcomes contributions from developers, healthcare professionals, designers, translators, and anyone passionate about improving global health access.
+Thank you for your interest in contributing! This document explains how to propose changes to the project. By participating, you agree to follow our [Code of Conduct](./CODE_OF_CONDUCT.md).
 
----
+## 1. Ways to contribute
 
-## Table of Contents
+You can help in many ways — not only with code:
 
-- [Code of Conduct](#code-of-conduct)
-- [How Can I Contribute?](#how-can-i-contribute)
-  - [Reporting Bugs](#reporting-bugs)
-  - [Suggesting Features](#suggesting-features)
-  - [Submitting Pull Requests](#submitting-pull-requests)
-- [Development Setup](#development-setup)
-- [Coding Standards](#coding-standards)
-- [Commit Message Guidelines](#commit-message-guidelines)
-- [Branching Strategy](#branching-strategy)
+- **Report a bug** through GitHub Issues using the "Bug report" template.
+- **Suggest a feature** through GitHub Issues using the "Feature request" template.
+- **Improve documentation** — fix a typo in the README, clarify a section, translate a page.
+- **Submit code** — bug fixes, new features, performance improvements.
+- **Review pull requests** opened by other contributors.
 
----
-
-## Code of Conduct
-
-By participating in this project, you agree to abide by our [Code of Conduct](CODE_OF_CONDUCT.md). Please read it before contributing.
-
----
-
-## How Can I Contribute?
-
-### Reporting Bugs
-
-If you find a bug, please open an issue on [GitHub Issues](https://github.com/arman300s/tele-care-connect/issues) and include:
-
-- A clear, descriptive title
-- Steps to reproduce the problem
-- Expected vs. actual behaviour
-- Screenshots or logs (if applicable)
-- Your environment (OS, browser, Node version)
-
-### Suggesting Features
-
-Feature requests are welcome! Open an issue with the label `enhancement` and describe:
-
-- The problem you are trying to solve
-- Your proposed solution
-- Any alternatives you have considered
-- How this aligns with the project's goal of improving healthcare access
-
-### Submitting Pull Requests
-
-1. **Fork** the repository and create your branch from `main`.
-2. **Follow** the [Development Setup](#development-setup) instructions.
-3. **Make your changes** with clear, focused commits.
-4. **Write or update tests** relevant to your change.
-5. **Ensure all tests pass** before opening a PR.
-6. **Open a Pull Request** against the `main` branch with:
-   - A clear description of the change and its purpose
-   - A reference to the related issue (e.g., `Closes #42`)
-   - Screenshots for UI changes
-
-A maintainer will review your PR and may request changes or clarification.
-
----
-
-## Development Setup
+## 2. Quick start for code contributions
 
 ```bash
-# 1. Fork and clone the repository
+# 1. Fork the repository on GitHub, then clone your fork:
 git clone https://github.com/<your-username>/tele-care-connect.git
 cd tele-care-connect
 
-# 2. Install dependencies
-npm install
+# 2. Create a branch
+git checkout -b feature/short-description
 
-# 3. Copy the example environment file
-cp .env.example .env
-# Edit .env with your local configuration
+# 3. Make your changes and commit using Conventional Commits
+git commit -m "feat(frontend): add language switcher"
 
-# 4. Start the development server
-npm run dev
+# 4. Push and open a pull request against the main branch of arman300s/tele-care-connect
+git push origin feature/short-description
 ```
 
-See [docs/DOCUMENTATION.md](docs/DOCUMENTATION.md) for a full description of configuration options.
+## 3. Branch naming
 
----
+- `feature/<description>` for new features.
+- `fix/<description>` for bug fixes.
+- `docs/<description>` for documentation changes.
+- `chore/<description>` for tooling, dependencies, configuration.
 
-## Coding Standards
+## 4. Commit messages
 
-- Use **clear, descriptive variable and function names**.
-- Keep functions small and single-purpose.
-- Add comments only where the intent is not obvious from the code.
-- Follow the existing code style for the file you are editing.
-- Do not commit secrets, API keys, or personal data.
+We use [Conventional Commits](https://www.conventionalcommits.org/). Examples:
 
----
+- `feat(frontend): add doctor filter by specialty`
+- `fix(backend): correct timezone handling in bookings`
+- `docs(readme): clarify installation steps for backend`
+- `chore: bump dependencies via Dependabot`
 
-## Commit Message Guidelines
+## 5. Pull request checklist
 
-Use the following format for commit messages:
+Before requesting a review, please make sure:
 
-```
-<type>: <short summary>
-```
+- [ ] The branch is up to date with `main`.
+- [ ] Your changes build and run locally.
+- [ ] You added or updated documentation if user-visible behaviour changed.
+- [ ] You added a screenshot for UI changes.
+- [ ] You did not add secrets, API keys, or personal data.
+- [ ] You agree to the MIT License of the project.
 
-Common types:
+## 6. Review process
 
-| Type       | When to use                               |
-|------------|-------------------------------------------|
-| `feat`     | A new feature                             |
-| `fix`      | A bug fix                                 |
-| `docs`     | Documentation changes only                |
-| `refactor` | Code change that is not a fix or feature  |
-| `test`     | Adding or updating tests                  |
-| `chore`    | Maintenance tasks (deps, config, etc.)    |
+- At least one maintainer reviews each PR.
+- Reviewers may request changes; please respond to comments within a week.
+- Once approved, a maintainer will squash-merge your branch into `main`.
 
-Example: `feat: add video consultation scheduling`
+## 7. Reporting security issues
 
----
+Please **do not** open a public issue for security vulnerabilities. Email the maintainers privately (see `SECURITY.md`). We aim to acknowledge reports within 72 hours.
 
-## Branching Strategy
+## 8. Recognition
 
-| Branch   | Purpose                                     |
-|----------|---------------------------------------------|
-| `main`   | Stable, production-ready code               |
-| `dev`    | Integration branch for in-progress features |
-| `feat/*` | Individual feature branches                 |
-| `fix/*`  | Bug fix branches                            |
-
-Always branch off `main` for fixes and `dev` for new features unless instructed otherwise.
-
----
-
-## Questions?
-
-If you have any questions, feel free to open a [Discussion](https://github.com/arman300s/tele-care-connect/discussions) or reach out to the maintainers via the repository's Issues page.
-
-Thank you for helping make healthcare more accessible! 🌍
+All accepted contributions are credited in the project history. Thank you for helping make telemedicine more accessible!
